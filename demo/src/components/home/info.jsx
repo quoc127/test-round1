@@ -148,23 +148,22 @@ const general = [
 
 export const Info = () => {
   return (
-    <div className="w-full h-auto grid grid-cols-2 text-white bg-[#020c20] rounded-lg">
-      <div className="p-4">
-        <div className="flex items-center justify-end h-[24px] w-[656px]">
+    <div className="w-full h-auto grid grid-cols-1 md:grid-cols-2 text-white bg-[#020c20] rounded-lg">
+      <div className="p-4 grid-flow-col-1">
+        <div className="flex items-center justify-end h-[24px]">
           <Star />
         </div>
-        <div className="flex flex-row gap-4 items-center h-[132px] w-[656px]">
-          <div className="w-[90px] h-[90px] rounded-full border-collapse bg-white flex items-center justify-center">
-            <img src="https://img.uniscore.com/football/player/%7Bdecode(playerId)%7D/image/medium" />
+        <div className="flex flex-row gap-4 items-center h-[132px]">
+          <div className="w-[40px] h-[40px] md:w-[90px] md:h-[90px] rounded-full border-collapse bg-white flex items-center justify-center">
+            <img src="https://img.uniscore.com/football/player/%7Bdecode(playerId)%7D/image/medium"  className="object-cover w-[30px] h-[30px]" />
           </div>
           <div className="fex flex-col">
-            <p className="text-3xl font-medium">AIvaro Morata</p>
-            <div className="flex flex-row gap-4">
+            <p className="md:text-3xl font-medium">AIvaro Morata</p>
+            <div className="flex flex-row gap-2 md:gap-4">
               <img
                 src="https://img.uniscore.com/football/team/$%7Bdecode(teamId)%7D/image/small"
-                width={40}
-                height={40}
-                className="object-cover"
+                // width={30}
+                className="object-cover h-[30px] w-[30px]"
               />
               <div>
                 <p className="text-md font-semibold">Atletico Madrid</p>
@@ -176,13 +175,13 @@ export const Info = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-1 md:grid-cols-2">
         {general.map((item, index) => {
           return (
             <div
               key={index}
-              className={`px-4 py-2 border-l border-gray-600 ${
-                index >= general.length - 2 ? "border-b-0" : "border-b"
+              className={`px-4 py-2 border-t md:border-t-0 md:border-l border-gray-600 ${
+                index >= general.length - 2 ? "border-b-0" : "md:border-b"
               }`}
             >
               <p className="text-[#aaaaaa]">{item.title}</p>

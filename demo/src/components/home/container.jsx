@@ -31,14 +31,14 @@ const ContainerContent = [
 
 export const Container = () => {
   return (
-    <div className="grid grid-cols-2 h-auto bg-[#020c20] text-white mt-12 mb-12">
+    <div className="grid grid-cols-1 md:grid-cols-2 h-auto bg-[#020c20] text-white mt-12 mb-12">
       <div className="p-4">
         <h1 className="font-bold">TRANSFER VALUE</h1>
         <div className="max-w-lg pt-4">
           <LineChartContainer />
         </div>
       </div>
-      <div className="grid grid-cols-1 border-l border-gray-600 p-4">
+      <div className="grid grid-cols-1 md:border-l border-gray-600 p-4">
         {ContainerContent.map((item, index) => {
           return (
             <div
