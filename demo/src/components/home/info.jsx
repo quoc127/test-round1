@@ -148,7 +148,7 @@ const general = [
 
 export const Info = () => {
   return (
-    <div className="w-full h-[204px] grid grid-cols-2 text-white bg-[#020c20] rounded-lg">
+    <div className="w-full h-auto grid grid-cols-2 text-white bg-[#020c20] rounded-lg">
       <div className="p-4">
         <div className="flex items-center justify-end h-[24px] w-[656px]">
           <Star />
