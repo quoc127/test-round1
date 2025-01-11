@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { Separator } from "../ui/separator";
+import { Button } from "../ui/button";
 
 const CheckPassing = (techniqueScore, defenseScore) => {
   const defensiveRatio = defenseScore / (techniqueScore + defenseScore);
@@ -84,7 +86,8 @@ export const GameLogic = ({ players, setGameData }) => {
   return (
     <div>
       <h2>Trò chơi đang diễn ra</h2>
-      <button onClick={handleNextTurn}>Chuyền bóng</button>
+      <Button onClick={handleNextTurn}>Chuyền bóng</Button>
+      <h3 className="font-bold">Người chơi hiện tại:</h3>
       <ul>
         {currentPlayers.map((player, index) => (
           <li key={index}>
@@ -92,7 +95,7 @@ export const GameLogic = ({ players, setGameData }) => {
           </li>
         ))}
       </ul>
-      <h3>Lịch sử lượt chơi:</h3>
+      <h3 className="font-bold">Lịch sử lượt chơi:</h3>
       <ul>
         {turnHistory.map((turn, index) => (
           <li key={index}>
@@ -101,6 +104,7 @@ export const GameLogic = ({ players, setGameData }) => {
           </li>
         ))}
       </ul>
+      <Separator className="my-4" />
     </div>
   );
 };

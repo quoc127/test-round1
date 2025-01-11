@@ -7,6 +7,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import { Separator } from '../ui/separator';
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
@@ -39,6 +40,7 @@ export const Chart = ({ gameData }) => {
     <div style={{ width: '600px', height: '400px' }}>
       <h2>Thống kê kỹ thuật</h2>
       <Bar data={data} />
+      <Separator className="my-4" />
     </div>
   );
 };

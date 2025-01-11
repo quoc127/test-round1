@@ -9,8 +9,8 @@ function App() {
   const [gameData, setGameData] = useState([]); 
   
   return (
-    <div className="App">
-      <h1>Football Passing Game</h1>
+    <div className="grid grid-rows-1 items-center justify-center">
+      <h1 className="p-4">Football Passing Game</h1>
       <PlayerForm setPlayers={setPlayers} />
       {players.length >= 5 && (
         <GameLogic players={players} setGameData={setGameData} />

@@ -1,3 +1,5 @@
+import { Separator } from "../ui/separator";
+
 export const Leaderboard = ({ gameData }) => {
   return (
     <div>
@@ -14,6 +16,7 @@ export const Leaderboard = ({ gameData }) => {
           </li>
         ))}
       </ul>
+      <Separator className="my-4" />
     </div>
   );
 };
