@@ -31,6 +31,9 @@ export const GameLogic = ({ players, setGameData }) => {
       passer.techniques[Math.floor(Math.random() * passer.techniques.length)];
     const success = CheckPassing(technique.difficulty, receiver.defense);
 
+    console.log("technique",technique);
+    
+
     const newTurn = {
       passer: passer.name,
       receiver: receiver.name,

@@ -8,8 +8,8 @@ export const PlayerForm = ({ setPlayers }) => {
   const [playerNumber, setPlayerNumber] = useState("");
 
   const handleAddPlayer = () => {
-    if (playerList.length >= 5) {
-      alert("Bạn đã đủ 5 cầu thủ!");
+    if (playerList.length >= 10) {
+      alert("Bạn đã đủ 10 cầu thủ!");
       return;
     }
 
@@ -85,7 +85,7 @@ export const PlayerForm = ({ setPlayers }) => {
       </ul>
       <Button
         onClick={handleSubmit}
-        className={`mt-4 ${playerList.length === 5 ? "block" : "hidden"}`}
+        className={`mt-4 ${playerList.length === 10 ? "block" : "hidden"}`}
       >
         Bắt đầu trò chơi
       </Button>
